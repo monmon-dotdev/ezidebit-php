@@ -1,0 +1,11 @@
+{
+    "name": "turnstileweb/ezidebit-php",
+    "description": "An Ezidebit SOAP web service client for PHP",
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/http-foundation": "~2.1"
+    },
+    "autoload": {
+        "psr-0": {"TurnstileWeb\\": "src/"}
+    }
+}
