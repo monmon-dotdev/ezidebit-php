@@ -74,18 +74,18 @@ class GetPayments extends AbstractMethod
     protected function getBodyString()
     {
         return <<<XML
-<px:GetPayments>
-    <px:DigitalKey>$this->digitalKey</px:DigitalKey>
-    <px:PaymentType>$this->parameters()->get('paymentType')</px:PaymentType>
-    <px:PaymentMethod>$this->parameters()->get('paymentMethod')</px:PaymentMethod>
-    <px:PaymentSource>$this->parameters()->get('paymentSource')</px:PaymentSource>
-    <px:PaymentReference />
-    <px:DateFrom>$this->parameters()->get('dateFrom')->format('Y-m-d')</px:DateFrom>
-    <px:DateTo>$this->parameters()->get('dateTo')->format('Y-m-d')</px:DateTo>
-    <px:DateField>$this->parameters()->get('dateField')</px:DateField>
-    <px:EziDebitCustomerID />
-    <px:YourSystemReference>$this->parameters()->get('yourSystemReference')</px:YourSystemReference>
-</px:GetPayments>
+        <px:GetPayments>
+            <px:DigitalKey>$this->digitalKey</px:DigitalKey>
+            <px:PaymentType>$this->parameters()->get('paymentType')</px:PaymentType>
+            <px:PaymentMethod>$this->parameters()->get('paymentMethod')</px:PaymentMethod>
+            <px:PaymentSource>$this->parameters()->get('paymentSource')</px:PaymentSource>
+            <px:PaymentReference />
+            <px:DateFrom>$this->parameters()->get('dateFrom')->format('Y-m-d')</px:DateFrom>
+            <px:DateTo>$this->parameters()->get('dateTo')->format('Y-m-d')</px:DateTo>
+            <px:DateField>$this->parameters()->get('dateField')</px:DateField>
+            <px:EziDebitCustomerID />
+            <px:YourSystemReference>$this->parameters()->get('yourSystemReference')</px:YourSystemReference>
+        </px:GetPayments>
 XML;
     }
 }

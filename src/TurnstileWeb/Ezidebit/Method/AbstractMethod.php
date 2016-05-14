@@ -7,7 +7,7 @@ use TurnstileWeb\Ezidebit\Soap\SoapClient;
  * Class AbstractMethod
  * @package TurnstileWeb\Ezidebit\Method
  */
-abstract class AbstractMethod
+abstract class AbstractMethod implements MethodInterface
 {
     /**
      * @var string

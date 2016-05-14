@@ -2,6 +2,7 @@
 
 namespace TurnstileWeb\Ezidebit;
 use Symfony\Component\HttpFoundation\ParameterBag;
+use TurnstileWeb\Ezidebit\Method\MethodInterface;
 
 /**
  * Class Ezidebit
@@ -48,8 +49,15 @@ class Ezidebit
         $this->initialize();
     }
 
-    protected function createMethod($class)
+    /**
+     * Factory for web service methods
+     *
+     * @param MethodInterface $class
+     * @return MethodInterface
+     */
+    protected function createMethod(MethodInterface $class)
     {
+        /** @var MethodInterface $requestObject */
         $requestObject = new $class($this->digitalKey, $this->pciMode, $this->environment);
         return $requestObject->initialize(array_replace($this->getParameters(), $parameters));
     }
